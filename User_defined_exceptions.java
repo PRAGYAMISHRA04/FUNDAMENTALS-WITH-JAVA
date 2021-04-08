@@ -13,7 +13,16 @@ class TooOldException extends Exception{
 
 
     public class User_defined _exceptions
-{
+{        static void validate1(int age) throws TooYoungException{
+                if(age<18){
+		        throw new TooYoungException(" Too Young to apply for job ");
+		    }
+           }
+	static void validate2(int age) throws TooOldException{
+	   if(age>60){
+		        throw new TooOldException(" Too Old to apply for job ");
+		    }
+         }
 	public static void main(String[] args) {
 		System.out.println(" ENTER YOUR AGE TO CHECK ELIGIBILITY ");
 		int age;
@@ -22,12 +31,8 @@ class TooOldException extends Exception{
 		
 		try{
 		    
-		    if(age<18){
-		        throw new TooYoungException(" Too Young to apply for job ");
-		    }
-		    else if(age>60){
-		        throw new TooOldException(" Too Old to apply for job ");
-		    }
+		  validate1(age);
+	          validate2(age);
 	       }
 	    catch(TooOldException E){
 	        System.out.println(" Too Old to apply for job ");
