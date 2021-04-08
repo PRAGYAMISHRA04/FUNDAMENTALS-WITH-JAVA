@@ -35,10 +35,10 @@ class TooOldException extends Exception{
 	          validate2(age);
 	       }
 	    catch(TooOldException E){
-	        System.out.println(" Too Old to apply for job ");
+	        System.out.println(E+" Too Old to apply for job ");
 	    }
 	    catch(TooYoungException E){
-	        System.out.println(" Too Young to apply for job ");
+	        System.out.println(E+" Too Young to apply for job ");
 	    }
 }
 }
